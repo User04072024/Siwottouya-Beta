@@ -1,15 +1,19 @@
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import Home from '@/pages/Home';
-import Products from '@/pages/Products';
-import About from '@/pages/About';
-import Contact from '@/pages/Contact';
-import { ThemeProvider } from '@/context/ThemeProvider';
-import { AdminProvider } from '@/context/AdminContext';
-import AdminPanel from '@/components/AdminPanel';
+
+// Componentes Layout y Páginas - CORREGIDO: Añadido .jsx
+import Header from '@/components/layout/Header.jsx';
+import Footer from '@/components/layout/Footer.jsx';
+import Home from '@/pages/Home.jsx';
+import Products from '@/pages/Products.jsx';
+import About from '@/pages/About.jsx';
+import Contact from '@/pages/Contact.jsx';
+
+// Contextos y otros componentes - CORREGIDO: Añadido .jsx
+import { ThemeProvider } from '@/context/ThemeProvider.jsx';
+import { AdminProvider } from '@/context/AdminContext.jsx';
+import AdminPanel from '@/components/AdminPanel.jsx';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -44,4 +48,5 @@ function App() {
 }
 
 export default App;
+
 
