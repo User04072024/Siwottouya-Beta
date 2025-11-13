@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
-  // SOLUCIÓN: Añadir la ruta base de tu repositorio
-  base: '/Siwottouya-Beta/', 
+  // SOLUCIÓN: Usar ruta base relativa para GitHub Pages
+  base: './', 
   
   plugins: [react()],
   resolve: {
@@ -13,6 +13,7 @@ export default defineConfig({
     },
   },
 })
+
 
 
 
