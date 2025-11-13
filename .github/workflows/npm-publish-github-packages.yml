@@ -1,11 +1,4 @@
-# .github/workflows/deploy.yml
-name: Deploy React/Vite App to GitHub Pages
-
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+//# ... (código anterior)
 
 jobs:
   build:
@@ -19,28 +12,19 @@ jobs:
         with:
           node-version: '20'
 
-      # ¡ATENCIÓN! Usamos 'working-directory' para entrar a la carpeta del proyecto
+      # CORREGIDO: Eliminamos el punto y la barra inicial './'
       - name: Install dependencies
         run: npm install
-        working-directory: ./PAGINA WEB SIWOTTOUYA # Asegúrate que este nombre coincida EXACTO
+        working-directory: PAGINA WEB SIWOTTOUYA # ¡CORREGIDO!
 
       - name: Build project (npm run build)
         run: npm run build
-        working-directory: ./PAGINA WEB SIWOTTOUYA # Ejecutar la compilación aquí
+        working-directory: PAGINA WEB SIWOTTOUYA # ¡CORREGIDO!
 
-      # Sube los artefactos. La carpeta 'dist' ahora está dentro de la subcarpeta.
+      # CORREGIDO: La ruta al artefacto también debe ser relativa a la raíz
       - name: Upload production assets
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./PAGINA WEB SIWOTTOUYA/dist # Ruta corregida al output de Vite
+          path: PAGINA WEB SIWOTTOUYA/dist # ¡CORREGIDO!
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+  # ... (código del job deploy)
