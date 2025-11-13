@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import App from '@/App';
-import '@/index.css';
-import { Toaster } from '@/components/ui/toaster';
-import { CartProvider } from '@/context/CartContext';
-import { DataProvider } from '@/context/DataContext';
+import App from '@/App.jsx'; // Añadido .jsx
+import './index.css';
+import { Toaster } from "@/ui/toaster.jsx"; // Añadido .jsx
+import { CartProvider } from "@/context/CartContext.jsx" // Añadido .jsx
+import { DataProvider } from "@/context/DataContext.jsx" // Añadido .jsx
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -19,3 +19,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
