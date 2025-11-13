@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 22.3 93.9% 49.2%; /* Terracota/Orange */
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 180 70% 45%; /* Turquoise */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 35 85% 95%; /* Sand */
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 22.3 93.9% 49.2%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 30 20% 5%; /* Dark Sand */
+    --foreground: 60 9.1% 97.8%;
+    --card: 30 20% 8%;
+    --card-foreground: 60 9.1% 97.8%;
+    --popover: 30 20% 5%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --primary: 22.3 93.9% 55%; /* Brighter Terracota */
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 180 70% 50%; /* Brighter Turquoise */
+    --secondary-foreground: 60 9.1% 97.8%;
+    --muted: 30 20% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 30 20% 12%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 30 20% 15%;
+    --input: 30 20% 15%;
+    --ring: 22.3 93.9% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+.wayuu-pattern {
+    background-image:
+        linear-gradient(rgba(253, 244, 235, 0.95), rgba(253, 244, 235, 0.95)),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d97706' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.dark .wayuu-pattern {
+    background-image:
+        linear-gradient(rgba(39, 32, 24, 0.97), rgba(39, 32, 24, 0.97)),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f97316' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
